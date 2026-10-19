@@ -1,0 +1,3 @@
+- insert:
+    - id: quota-whale
+      name: '@local/quota-whale'
