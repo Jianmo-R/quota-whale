@@ -1,0 +1,17 @@
+NOTICE
+======
+
+The MIT license in LICENSE covers the source code of this repository.
+
+The bundled mascot artwork is NOT covered by the MIT license:
+
+- assets/quota-whale.png
+- the base64 data URI embedded in client.js (MASCOT_URI)
+
+It is a community fan-art-style whale-girl character asset supplied by the
+repository owner. It is not an official DeepSeek mascot. If you fork this
+project and redistribute it publicly, replace the artwork with your own
+original asset, or confirm that you have the rights to redistribute it.
+
+The dialogue phrases are short community meme references and are provided for
+personal/community use.

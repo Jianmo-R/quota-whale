@@ -2,8 +2,32 @@
   "name": "@local/quota-whale",
   "version": "1.0.0",
   "private": true,
-  "description": "A corner mascot that shows the remaining DeepSeek account balance.",
+  "description": "A floating DeepSeek Harness quota widget with a whale-girl mascot, drag, wheel zoom and click reactions.",
+  "license": "MIT",
+  "author": "Jianmo-R",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jianmo-R/quota-whale.git"
+  },
+  "homepage": "https://github.com/Jianmo-R/quota-whale#readme",
+  "bugs": {
+    "url": "https://github.com/Jianmo-R/quota-whale/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "quota",
+    "balance",
+    "widget",
+    "mascot"
+  ],
   "type": "module",
+  "scripts": {
+    "check": "node --check client.js && node --check index.js",
+    "test": "node scripts/smoke-test.mjs"
+  },
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
@@ -15,7 +39,10 @@
     "client.js",
     "cordis.patch.yml",
     "locale/*.json",
-    "icon.png"
+    "icon.png",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
   ],
   "dsh": {
     "bundle": { "patch": "./cordis.patch.yml" },

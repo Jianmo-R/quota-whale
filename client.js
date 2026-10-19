@@ -5,7 +5,10 @@ window.__ModuleLoader__.load({
     const h = React.createElement;
 
     const REFRESH_INTERVAL_MS = 120000;
-    const HARNESS_VERSION = '0.2.1-rc.2';
+    const BOOT = (typeof globalThis !== 'undefined' && globalThis.__DSH_BOOT__) || {};
+    const CLIENT_VERSION = BOOT && BOOT.release && typeof BOOT.release.version === 'string'
+      ? BOOT.release.version
+      : '1.0.0';
     const WIDGET_SIZE = 240;
     const VIEWPORT_MARGIN = 8;
     const POSITION_KEY = 'dsh.quota-whale.position.v1';
@@ -314,7 +317,7 @@ window.__ModuleLoader__.load({
         // Fall back to the browser language.
       }
       return {
-        version: HARNESS_VERSION,
+        version: CLIENT_VERSION,
         locale: active,
         timezoneOffsetSeconds: -new Date().getTimezoneOffset() * 60,
       };
